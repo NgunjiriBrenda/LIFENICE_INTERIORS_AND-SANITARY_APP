@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from database import db
+from routers.auth import auth_bp
 
 def create_app():
     app = Flask(__name__)
@@ -16,6 +17,8 @@ def create_app():
     with app.app_context():
         import models  
         db.create_all()
+
+    app.register_blueprint(auth_bp, url_prefix="/api")
 
     return app
 
