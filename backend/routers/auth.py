@@ -4,16 +4,9 @@ from functools import wraps
 from flask import Blueprint, request, jsonify, current_app
 from database import db
 from models import User
+from utils.jwt_handler import create_token, decode_token
 
 auth_bp = Blueprint("auth", __name__)
-
-
-def make_tokens(user):
-    payload = {
-        "user_id": user.id,
-        "exp": datetime.utcnow() + timedelta(days=7),
-    }
-    return jwt.encode(payload, current_app.config["JWT_SECRET"], algorithm="HS256")
 
 
 def token_required(f):
@@ -25,9 +18,8 @@ def token_required(f):
 
         token = auth_header.split(" ", 1)[1]
         try:
-            payload = jwt.decode(
-                token, current_app.config["JWT_SECRET"], algorithms=["HS256"]
-            )
+            payload = decode_token(token)
+        
         except jwt.ExpiredSignatureError:
             return jsonify({"error": "Token expired, please log in again"}), 401
         except jwt.InvalidTokenError:
@@ -70,7 +62,7 @@ def signup():
     db.session.add(user)
     db.session.commit()
 
-    token = make_tokens(user)
+    token = create_token(user)
     return jsonify({"token": token, "user": user.to_dict()}), 201
 
 
@@ -84,8 +76,11 @@ def login():
     if not user or not user.check_password(password):
         return jsonify({"error": "Incorrect email or password"}), 401
 
-    token = make_tokens(user)
+    token = create_token(user)
     return jsonify({"token": token, "user": user.to_dict()}), 200
+
+    print(login.status_code)
+    print(login.text[:300])
 
 
 @auth_bp.route("/me", methods=["GET"])
