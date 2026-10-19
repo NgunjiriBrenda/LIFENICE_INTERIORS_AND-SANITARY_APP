@@ -3,6 +3,7 @@ from flask_cors import CORS
 from database import db
 from routers.auth import auth_bp
 from routers.products import products_bp
+from routers.order import orders_bp
 
 def create_app():
     app = Flask(__name__)
@@ -10,6 +11,7 @@ def create_app():
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///lifenice.db"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     app.config["JWT_SECRET"] = "dev-secret-change-me"
+    
 
     CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
 
@@ -21,6 +23,7 @@ def create_app():
 
     app.register_blueprint(auth_bp, url_prefix="/api")
     app.register_blueprint(products_bp, url_prefix="/api")
+    app.register_blueprint(orders_bp, url_prefix="/api")
 
     return app
 
