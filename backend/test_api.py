@@ -10,7 +10,7 @@ login = requests.post(f"{BASE}/login", json={
 token = login.json()["token"]
 
 product  = {
-    "sku": "PANEL-002",
+    "sku": "PANEL-002 ",
     "name": "Decorative Panel",
     "category": "Interior",
     "price": 1200,
