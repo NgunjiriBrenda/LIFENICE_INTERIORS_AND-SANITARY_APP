@@ -43,6 +43,29 @@
  export default function Landing(){
     return (
         <div className="min-h-screen bg-stone-50 text-stone-900">
-            
+        
+        <header className="border-b border-stone-200 bg-white">
+            <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+                <Link to="/"className="text-2xl font-bold tracking-tight">
+                Life<span className="text-amber-800">Nice.</span>
+                </Link>
+
+                <div className="hidden items-center gap-8 md:flex">
+                    <Link to="/"className="hover:text-amber-800">Home </Link>
+                    <Link to="/proucts"className="hover:text-amber-800">Products </Link>
+                    <Link to="/login"className="hover:text-amber-800">Login</Link>
+
+                </div>
+
+                <Link to="/products"className="rounded-full bg-amber-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-amber-800">
+                Shop now
+                </Link>
+
+                </nav>
+
+                </header>
+                
+
+
     )
  }
