@@ -64,6 +64,14 @@
                 </nav>
 
                 </header>
+
+                <main>
+                    <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-24">
+                        <div>
+                            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.25em]text-amber-800">
+                                Thoughtful spaces.Beautiful living </p>
+
+                             
                 
 
 
