@@ -29,6 +29,20 @@
 
     {
         name: "Cornices",
-        description: ""
-    }
- ]
+        description: "Decorative bridging wall and ceiling",
+        image: "https://i.pinimg.com/736x/8c/1c/1a/8c1c1aaebd5a9ff26e8a09f91d7498be.jpg",
+
+    },
+
+    {
+        name: "Wainscoting",
+        description: "Traditional style of panel",
+        image: "https://i.pinimg.com/736x/fc/2b/50/fc2b502cf471f590428bbef2265e4967.jpg",
+    },
+ ];
+ export default function Landing(){
+    return (
+        <div className="min-h-screen bg-stone-50 text-stone-900">
+            
+    )
+ }
