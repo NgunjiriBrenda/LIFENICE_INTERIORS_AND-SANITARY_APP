@@ -105,7 +105,20 @@
                                 </div>
                             </div>
                         </section>
-                        
+
+                        <section id="categories"className="bg-white py-20">
+                            <div className="mx-auto max-w-7xl px-6">
+                                <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+                                    <div>
+                                        <p className="text-sm font-semibold uppercase tracking-widest text-amber-800">
+                                            Explore our collection
+                                        </p>
+                                        <h2 className="mt-3 text-3xl font-bold md:text-4xl">Find your interior style</h2>
+                                        
+                                    </div>
+
+                        </section>
+
 
 
 
