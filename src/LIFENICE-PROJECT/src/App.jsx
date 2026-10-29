@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from "reat-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Landing from "./pages/Landing";
 
 function ComingSoon({page}) {
@@ -14,16 +14,16 @@ export default function App(){
   return (
     <BrowserRouter>
     <Routes>
-      <Router path="/" element={<Landing />} />
-      <Router path="/products"element={<ComingSoon page="Products" />}/>
-      <Router path="/login" element={<ComingSoon page="Login" />} />
-      <Router path="/sign-up" elememnt={<ComingSoon page="Sign Up" />} />
-      <Router path="/product/:id" element={<ComingSoon page="Product Details"/>}/>
-      <Router path="cart" element={<ComingSoon page="Shopping Cart"/>}/>
-      <Router path="/checkout"element={<ComingSoon page="Checkout"/>}/>
-      <Router path="/admin" element={<ComingSoon page="Admin Dashboard"/>} />
+      <Route path="/" element={<Landing />} />
+      <Route path="/products"element={<ComingSoon page="Products" />}/>
+      <Route path="/login" element={<ComingSoon page="Login" />} />
+      <Route path="/sign-up" element={<ComingSoon page="Sign Up" />} />
+      <Route path="/product/:id" element={<ComingSoon page="Product Details"/>}/>
+      <Route path="/cart" element={<ComingSoon page="Shopping Cart"/>}/>
+      <Route path="/checkout"element={<ComingSoon page="Checkout"/>}/>
+      <Route path="/admin" element={<ComingSoon page="Admin Dashboard"/>} />
 
-    </Routers>
+    </Routes>
 
     </BrowserRouter>
 
