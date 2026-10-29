@@ -9,3 +9,24 @@ function ComingSoon({page}) {
     </main>
   );
 }
+
+export default function App(){
+  return (
+    <BrowserRouter>
+    <Routes>
+      <Router path="/" element={<Landing />} />
+      <Router path="/products"element={<ComingSoon page="Products" />}/>
+      <Router path="/login" element={<ComingSoon page="Login" />} />
+      <Router path="/sign-up" elememnt={<ComingSoon page="Sign Up" />} />
+      <Router path="/product/:id" element={<ComingSoon page="Product Details"/>}/>
+      <Router path="cart" element={<ComingSoon page="Shopping Cart"/>}/>
+      <Router path="/checkout"element={<ComingSoon page="Checkout"/>}/>
+      <Router path="/admin" element={<ComingSoon page="Admin Dashboard"/>} />
+
+    </Routers>
+
+    </BrowserRouter>
+
+      
+  )
+}
