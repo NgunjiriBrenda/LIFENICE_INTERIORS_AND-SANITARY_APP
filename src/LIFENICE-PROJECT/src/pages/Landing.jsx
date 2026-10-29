@@ -71,6 +71,49 @@
                             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.25em]text-amber-800">
                                 Thoughtful spaces.Beautiful living </p>
 
+                            <h1 className="max-w-xl text-5xl font-bold leading-tight tracking-tight md:text-7xl">
+                                Make your space feel like{" "}<span className="text-amber-800">home</span> </h1>
+
+                            <p className="mt-6 max-w-lg text-lg leading-8 text-stone-600">
+                                Discover stylish flooring, elegant wall panels and bathroom essentials designed to bring your interior dreams to life</p>
+
+                            <div className="mt-8 flex flex-wrap gap-4">
+                                <Link to="/products"className="rounded-full bg-amber-900 px-7 py-4 font-semibold text-white transition hover:bg-amber-800">
+                                Explore products </Link>
+
+                            <a href="#categories"className="round-full border border-stone-300 px-7 py-4 font-semibold transition hover:bg-stone-100">
+                                Discover more
+                            </a>
+
+                            </div>
+
+                            <p className="mt-8 text-sm text-stone-500">
+                                Flooring Wall Panel Bathroom essentials </p>
+                            </div>
+
+                            <div className="relative">
+
+                                <img src="https://plus.unsplash.com/premium_photo-1661963201626-2c69cfbe4f8a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Elegant modern living room interior"
+                                className="h-[360px] w-full rounded-3xl object-cover shadow-xl md:h-[520px]"/>
+
+                                <div classname="absolute -bottom-5 left-4 rounded-2xl bg-white p-5 shadow-lg sm:left-8">
+
+                                    <p className="text-sm text-stone-500">Your space, your style</p>
+
+                                    <p classname="mt-1 font-bold">Designed for better living.</p>
+
+                                </div>
+                            </div>
+                        </section>
+                        
+
+
+
+                            
+                    
+                            
+
+
                              
                 
 
