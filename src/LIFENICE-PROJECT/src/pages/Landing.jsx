@@ -138,15 +138,27 @@
                                 </div>
                         </section>
 
+                        <section className="bg-amber-950 px-6 py-16 text-center text-wite md:py-20">
+                            <h2 className="text-3xl font-bold md:text-4xl">Ready to transform your space?</h2>
+
+                            <p className="mx-auto mt-4 max-w-xl leading-7 text-amber-100">
+                                Discover interior essentials that bring comfort, style and personality into every room.
+                            </p>
+                            <Link to="/products" className="mt-8 incline-block rounded-full bg-white px-7 py-4 font-semibold text-amber-950 transition hover:bg-amber-100">
+                            Start exploring
+                            </Link>
+
+                        </section>
 
 
+                </main>
 
-                            
+                <footer className="bg-stone-100 px-6 py-8 text-center text-sm text-stone-600">
+                    {new Date().getFullYear()} LifeNice Interiors.All rights reserved.
                     
-                            
+                </footer>
 
-
-                             
-
-    )
+                </div>
+    );
  }
+
