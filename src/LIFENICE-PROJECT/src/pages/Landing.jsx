@@ -117,6 +117,25 @@
                                         
                                     </div>
 
+                                    <Link to="/products"className="font-semibold text-amber-900 hover:underline">View all products</Link>
+
+                                    </div>
+
+                                    <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">{categories.map((category) =>(
+                                        <Link to="/products" key={category.name}className="group overflow-hidden rounded-2xl border border-stone-100 bg-stone-50 transition hover:-translate-y-1 hover:shadow-lg">
+                                            <mg src={category.image} alt={category.name}className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"/>
+
+                                            <div className="px-6">
+
+                                                <h3 className="text-xl font-bold">{category.name}</h3>
+                                                <p className="mt-2 text-stone-600">{category.description}</p>
+                                                <p className="mt-4 font-semibold text-amber-900">Explore collection</p>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                    </div>
+                                    
+                                </div>
                         </section>
 
 
@@ -128,8 +147,6 @@
 
 
                              
-                
-
 
     )
  }
